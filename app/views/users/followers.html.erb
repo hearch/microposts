@@ -1,0 +1,16 @@
+<%= render 'follow_form' if logged_in? %>
+<% if @followers.any? %>
+<h3>Followers (<%= @followers.count %>)</h3>
+
+<div class="container-fluid">
+  <div class="row">
+      <% @followers.each do |follower| %>
+        <div class="col-xs-12 col-md-4 userbox">
+        <%= link_to gravatar_for(follower, size: 50), follower %>
+        <%= link_to follower.name, follower %><br>
+        <%= follower.profile %>
+        </div>
+      <% end %>
+  </div>
+</div>
+<% end %>
