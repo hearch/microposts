@@ -1,0 +1,14 @@
+<h3>User List (<%= @users.count %>)</h3>
+
+<div class="container-fluid">
+  <div class="row">
+      <% @users.each do |user| %>
+        <div class="col-xs-12 col-md-4 userbox">
+        <%= link_to gravatar_for(user, size: 50), user %>
+        <%= link_to user.name, user %><br>
+        <%= user.profile %>
+        </div>
+      <% end %>
+  </div>
+  <%= paginate @users %>
+</div>

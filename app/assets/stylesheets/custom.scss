@@ -5,6 +5,7 @@
 
 body {
   padding-top: 60px;
+  background-color: #00bfff;
 }
 
 section {
@@ -201,4 +202,11 @@ span.picture {
 
 .userbox {
   margin-bottom: 30px;
+  height: 80px;
+}
+
+.row {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
 }

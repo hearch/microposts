@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.all.page params[:page]
+  end
+
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts
+    @microposts = @user.microposts.page params[:page]
   end
-  
+   
   def new
     @user = User.new
   end
@@ -35,12 +39,12 @@ class UsersController < ApplicationController
 
   def followings
       @user = User.find(params[:id])
-      @followings = @user.following_users
+      @followings = @user.following_users.page params[:page]
   end
 
   def followers
       @user = User.find(params[:id])
-      @followers = @user.follower_users
+      @followers = @user.follower_users.page params[:page]
   end
   
   private
