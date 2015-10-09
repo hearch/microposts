@@ -1,0 +1,1 @@
+$("#favorite_<%= @micropost.id %>").replaceWith("<%= escape_javascript(render :partial => "microposts/unfavorite", :locals => {:micropost => @micropost }) %>");

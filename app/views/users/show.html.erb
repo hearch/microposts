@@ -9,7 +9,7 @@
         / Followers : <%= link_to @user.follower_users.count , followers_user_path(@user) %> )</p>
         </section>
   </aside>
-  <div class="col-md-4">
+  <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>

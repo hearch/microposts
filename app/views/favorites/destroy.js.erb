@@ -1,0 +1,1 @@
+$("#favorite_<%= @micropost.id %>").html("<%= escape_javascript(render :partial => "microposts/favorite", :locals => {:micropost => @micropost }) %>");

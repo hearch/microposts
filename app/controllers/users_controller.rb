@@ -47,6 +47,12 @@ class UsersController < ApplicationController
       @followers = @user.follower_users.page params[:page]
   end
   
+  def favorites
+      @user = User.find(params[:id])
+      @favorites = @user.favorite_microposts.page params[:page]
+  end
+  
+  
   private
   
   def user_params
