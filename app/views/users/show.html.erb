@@ -5,8 +5,9 @@
         <%= @user.name %></h1>
         <p><%= @user.prefecture %><br>
         <%= @user.profile %></p>
-        <p>( Following : <%= link_to @user.following_users.count , followings_user_path(@user) %> 
-        / Followers : <%= link_to @user.follower_users.count , followers_user_path(@user) %> )</p>
+        <p>Following : <%= link_to @user.following_users.count , followings_user_path(@user) %> 
+        / Followers : <%= link_to @user.follower_users.count , followers_user_path(@user) %></p>
+        <p>Favorite Tweet List : <%= link_to @user.favorite_microposts.count , favorites_user_path(@user) %></p>
         </section>
   </aside>
   <div class="col-md-8">
